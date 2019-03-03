@@ -1,0 +1,135 @@
+{% load static %}
+
+<html>
+<head>
+
+<link rel="shortcut icon" type="image/x-icon" href="this.ico" />
+<style>
+h1.header{
+text-align:center;
+padding:15px;
+background-color:rgb(0,200,0);
+width:auto;
+height:50px;
+border-style:double;
+border-width:5px;
+border-color:black;
+}
+li{
+float:left;
+}
+ul.nav{
+list-style-type:none;
+margin:0;
+padding:0;
+background-color:red;
+overflow:hidden;
+
+border-right-style:solid;
+border-left-style:solid;
+border-color:black;
+
+}
+li{
+float:left;
+}
+li a, .dropbtn{
+display: inline-block;
+padding: 10px;
+width:100px;
+height:20px;
+text-decoration:none;
+color:black;
+}
+
+li a:hover{
+background-color: orange;
+}
+
+.dropdown-content{
+display:none;
+position:absolute;
+z-index:1;
+}
+.dropdown-content a{
+display:block;
+text-align:left;
+color:rgb(255,255,255);
+background-color:rgb(0,0,0);
+}
+.dropdown:hover .dropdown-content{
+display:block;
+}
+.dropdown-content a:hover{
+background-color:rgb(150,150,150);
+}
+div.rightSide{
+border-style:solid;
+border-width:2px;
+padding:15px;
+position:absolute;
+width:600px;
+height:500px;
+}
+div.footer{
+background-color:purple;
+border:solid;
+border-width:2px;
+border-color:red;
+padding:15px;
+text-align:center;
+margin-top:100px;
+width:auto;
+height:100px;
+}
+#data{
+margin-left:330px;
+margin-top:320px;
+}
+div.capt{
+margin-top:450px;
+margin-left:950px;
+position:relative;
+}
+</style>
+</head>
+
+<body style="background-color:yellow;">
+
+<h1 class="header">Welcome To My Page</h1>
+<marquee style="color:blue">Welcome</marquee>
+<ul class="nav">
+   <li><a href="{% url 'home' %}">Home</a></li>
+   <li><a href="#">About me</a></li>
+   <li class="dropdown">
+   <a href="javascript:void(0)" class="dropbtn">Contact</a>
+    <div class="dropdown-content">
+	 <a href="#">Mail me</a>
+	 <a href="#">Address</a>
+	 <a href="#">Details</a>
+	 <a href="#">Interests</a>
+	</div>   
+   </li>    
+   <li><a href="#">Tools</a></li>
+   <li id="lft"><a href="#">Login</a></li>
+ </ul>
+ <br>
+ <div class="rightSide">
+   <h4>Information</h4>                   	
+   <img src="{% static 'my_site/images/picME.jpg' %}"  style="width:400px;height:300px;float:left;margin-left:200px;position:absolute;transform:rotate(90deg);"></img>
+   <p>Text : Text<br>
+    Text:Text<br>
+	Text:Text</p>
+  <p id="data">Name : Spandan Pal<br>DOB:22/07/2000</p>
+</div>
+<div class="leftSide">
+   <a href="#"><img id="photo" class="pic" src="{% static 'my_site/images/pic1.jfif' %}" style="width:600px;height:400px;float:right;margin-right:50px;"></img></a>
+ </div>
+ <div class="capt">
+    Click image to open link
+	</div>
+ <div class="footer">
+  <p>Email:2spandan2@gmail.com</p>
+ </div>
+ </body>
+</html>

@@ -1,0 +1,53 @@
+
+body{
+background-color:rgba(150,250,200,0.3);
+padding-top:60px;
+padding-bottom:20px;
+}
+#a{
+	color:red;
+}
+#b{
+	background-color:rgba(255,255,255,0.4);
+	border-radius: 15px;
+
+}
+.jumbotron{
+  background-image:url("pic1.jfif");
+  background-size:cover;                      
+  background-repeat:no-repeat;
+  background-position:center center;    	
+}
+#d{
+	padding-top:30px;
+	padding-bottom:30px;
+}
+#e{
+	background-color:orange;
+	border-radius:15px;
+	padding:15px;
+}
+h1{
+	font-family: 'Oswald', sans-serif;
+}
+p{
+font-family: 'Merriweather', serif;
+}	
+#footUp{
+	padding: 20px;
+	background-color: purple;
+	color:white;	
+}
+#footdown{
+	padding-top: 20px;
+	background-color: blue;
+}
+#p{
+	padding-bottom: 20px;
+}
+.n{
+	color: white;
+}
+.n:hover{
+	background-color: rgba(170,170,170,0.5);
+}

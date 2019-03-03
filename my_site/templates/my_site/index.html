@@ -1,0 +1,216 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <link rel="stylesheet"
+          href="{% static 'my_site/bootstrap/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'my_site/css/extra.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+          integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Oswald" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bootstarp Task</title>
+</head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand navbar-left" href="#"><b style="color:blue">THIS IS THE BRAND</b></a>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class=" n"><a href="{% url 'home' %}">Home</a></li>
+                <li class="n"><a href="{% url 'about' %}">About</a></li>
+                <li class="dropdown n">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Options<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-header">Ex</li>
+                        <li><a href="#">Work</a></li>
+                        <li><a href="#">Vacancy</a></li>
+                    </ul>
+                </li>
+                <li class="n"><a href="#">Admin</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container">
+    <div class="jumbotron text-center">
+        <h1 id="a">Welcome to my brand !!!
+        </h1>
+        <p id="b">Text text text text text text text text text text text text text text text text text text text
+            text text text text text text text text text text text text text texttext text text text text text
+            text text
+            text text text text text text</p>
+        <button type="button" class="btn btn-primary" onclick="ask()">Feedback</button>
+        <br><br>
+        <button id="bt2" type="button" class="btn btn-warning" onclick="b2()">Do you want to click me?</button>
+    </div>
+</div>
+
+<div id="d" class="container">
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-4 centre-block">
+            <br><br>
+            <h1>Glimpses of the past</h1>
+        </div>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-4">
+            <div id="mycarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
+                <ol class="carousel-indicators">
+                    <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#mycarousel" data-slide-to="1"></li>
+                    <li data-target="#mycarousel" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="{% static 'my_site/images/img4.png' %}"
+                             style="width:500px;height:200px;position:center center;"></img>
+                        <div class="carousel-caption">
+                            <h5>Capt. 1</h5>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="{% static 'my_site/images/img5.jpg' %}"
+                             style="width:500px;height:200px;position:center center;"></img>
+                        <div class="carousel-caption">
+                            <h5>Capt. 2</h5>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="{% static 'my_site/images/img6.jpg' %}"
+                             style="width:500px;height:200px;position:center center;"></img>
+                        <div class="carousel-caption">
+                            <h5>Capt. 3</h5>
+                        </div>
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#mycarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#mycarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div id="p" class="container">
+    <div id="e" class="row">
+        <div class="col-sm-3">
+            <a href="#" class="thumbnail"><img src="{% static 'my_site/images/img1.jpg' %}"></img></a>
+            <h1>Growth</h1>
+            <p>Text text text text text text text text text text text text text text text text text text text
+                text text text text text</p>
+            <a href="#">
+                <button type="button" class="btn btn-success">More</button>
+            </a>
+        </div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-3">
+            <a href="#" class="thumbnail"><img src="{% static 'my_site/images/img2.jpg' %}"></img></a>
+            <h1>Market</h1>
+            <p>Text text text text text text text text text text text text text text text text text text text
+                text text text text text</p>
+            <a href="#">
+                <button type="button" class="btn btn-success">More</button>
+            </a>
+        </div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-3">
+            <a href="#" class="thumbnail"><img src="{% static 'my_site/images/img3.jpg' %}"></img></a>
+            <h1>Network</h1>
+            <p>Text text text text text text text text text text text text text text text text text text text
+                text text text text text</p>
+            <a href="#">
+                <button type="button" class="btn btn-success">More</button>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<footer>
+    <div id="footUp" class="footer-above">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col col-md-4">
+                    <p>Contact me:2spandan2@gmail.com</p>
+                </div>
+                <div class="footer-col col-md-5"></div>
+                <div class="footer-col col-md-1">
+                    <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                </div>
+
+                <div class="footer-col col-md-1">
+                    <a href="#"><i class="fab fa-google-plus fa-2x"></i></a>
+                </div>
+
+                <div class="footer-col col-md-1">
+                    <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footdown" class="footer-below">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col col-md-5"></div>
+                <div class="footer-col col-md-4">
+                    <p style="text-align: center;color:white;">Copyright</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript">
+    function ask() {
+        var n = prompt("Did you like the page?(Y/N)");
+        if (n === "Y" || n === "y") {
+            alert("Thank you!!!");
+        } else if (n === "N" || n === "n") {
+            var sug = prompt("Please give your suggestion.");
+        } else {
+            alert("Give a valid input.");
+            ask();
+        }
+    }
+
+    function b2() {
+
+        var s = document.getElementById('bt2').innerHTML;
+        if (s === "Do you want to click me?")
+            document.getElementById('bt2').innerHTML = "You changed me.Click again to restore."
+        else
+            document.getElementById('bt2').innerHTML = "Do you want to click me?";
+
+    }
+
+</script>
+
+</body>
+</html>
