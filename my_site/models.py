@@ -8,4 +8,10 @@ class student(models.Model):
     def _str_(self):
         return self.first_name
 
+class Contact(models.Model):
+    email=models.EmailField()
+    subject=models.CharField(max_length=196)
+    message=models.TextField()
 
+    def __str__(self):
+        return self.email
