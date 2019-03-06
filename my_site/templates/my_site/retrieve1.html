@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/sign-in/">
+
+
+    <link rel="stylesheet"
+          href="{% static 'my_site/bootstrap/bootstrap4.min.css' %}">
+
+
+    <style>
+        body{
+            background-color: #ffd66c ;
+        }
+
+
+    </style>
+
+    <title>Retrieve</title>
+</head>
+<body>
+</br>
+
+<form class="form-signin" action="{% url 'retrieve1' %}"  method="post">
+    {% csrf_token %}
+<div class="container">
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <label for="inputSearch" class="sr-only">Enter Username</label>
+            <div class="col-lg-4">
+                <input name="search" type="text" id="inputSearch" class="form-control" placeholder="Enter Username"
+                       required autofocus>
+            </div>
+        </div>
+    </div>
+</br>
+ <div class="container">
+        <div class="row">
+            <div class="col-lg-5"></div>
+            <div class="col-lg-2">
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Search</button>
+            </div>
+        </div>
+    </div>
+</br>
+</form>
+{% if flag == 1 %}
+    <p style="color: red">Entered username is not found in database</p>
+{% endif %}
+</body>
+</html>
