@@ -87,6 +87,26 @@ class UserFormView(View):
 
         return render(request, self.template_name, {'form': form})
 
+
+def retrieve1(request):
+    if request.method == 'POST':
+        searchun = request.POST.get('search')
+        all_data=StudentData.objects.all()
+        for user in all_data:
+            if searchun==user.username:
+                fn=user.firstName
+                ln=user.lastName
+                return render(request, 'my_site/retrieve2.html', {'username': all_data,'firstName':fn,'lastName':ln})
+        f=1
+        return render(request,'my_site/retrieve1.html',{'flag':f})
+    else:
+        return render(request, 'my_site/retrieve1.html')
+
+'''def retrieve2(request):
+    all_data=StudentData.objects.all()
+    return render(request,'my_site/retrieve2.html',{'username':all_data})'''
+
+
 """class abc(View):
     form_class = UserForm
     template_name = 'my_site/signup2.html'
